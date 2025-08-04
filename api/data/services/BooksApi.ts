@@ -24,7 +24,7 @@ export class BooksApi {
         return response
     }
 
-    public static async createNewBook(bookData: Object = BooksRequests.CREATE_NEW_BOOK, validateStatus: boolean = true) {
+    public static async createNewBook(bookData: object = BooksRequests.CREATE_NEW_BOOK, validateStatus: boolean = true) {
         console.info(`Books API: Creating a new book with the following data: ${bookData}.`)
         const options: RequestOptions = {
             method: RequestType.POST,
@@ -39,7 +39,7 @@ export class BooksApi {
         return response
     }
 
-    public static async updateBook(id: number, updateData: Object, validateStatus: boolean = true) {
+    public static async updateBook(id: number, updateData: object, validateStatus: boolean = true) {
         console.info(`Books API: Updating the book with ID: ${id} with the following data: ${updateData}.`)
         const options: RequestOptions = {
             method: RequestType.PUT,

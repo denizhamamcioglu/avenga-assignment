@@ -34,7 +34,7 @@ test.describe("Test books endpoints", () => {
         const allBooksResponse = await BooksApi.getAllBooks()
         const bookIdToUpdate = await (await allBooksResponse?.json())[0]['id']
 
-        const updateBookResponse = await BooksApi.updateBook(0, {})
+        const updateBookResponse = await BooksApi.updateBook(bookIdToUpdate, {})
         const updateBookJson = await updateBookResponse?.json()
         expect(updateBookResponse?.ok()).toBeTruthy()
         
