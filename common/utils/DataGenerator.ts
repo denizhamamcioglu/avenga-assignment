@@ -12,14 +12,26 @@ export class DataGenerator {
         return `${this.generateRandomString(length, prefix)}@mail.com`
     }
 
+    public static generateRandomNumberBetween(min: number, max: number) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    
     public static generateRandomPhone() {
         return faker.phone.number()
     }
 
-    public static generateRandomName() {
+    public static generateRandomFullName() {
         return faker.person.fullName()
     }
 
+    public static generateRandomFirstName() {
+        return faker.person.firstName()
+    }
+
+    public static generateRandomLastName() {
+        return faker.person.lastName()
+    }
+    
     public static getTimeDeltaSecondsFromCurrentTime(deltaInSeconds: number, format: string) {
         const currentTime = dayjs();
         return currentTime.add(deltaInSeconds, "second").format(format);

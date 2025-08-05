@@ -47,7 +47,7 @@ export class RequestSender {
             });
 
             const status = response.status();
-            console.debug(`HTTP Request: Request sent. Response: ${JSON.stringify(await response.json()).slice(0, 2000)}. Status: ${status}.`)
+            console.debug(`HTTP Request: Request sent. Status: ${status}.`)
 
             return response
 
