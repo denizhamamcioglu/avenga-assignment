@@ -5,7 +5,7 @@ import { AuthorsApi } from "../../../api/services/AuthorsApi";
 import { ResponseValidator } from "../../../common/api/ResponseValidator";
 
 let allAuthorsResponse: APIResponse | undefined
-let authorsToBeDeleted: number[] = []
+const authorsToBeDeleted: number[] = []
 
 test.describe("Test happy path flows of Authors API", () => {
     test.beforeAll(async () => {
@@ -21,7 +21,7 @@ test.describe("Test happy path flows of Authors API", () => {
                 await AuthorsApi.deleteAuthorWithId(authorId)
             }
         } catch (error: any) {
-            console.warn(`Test Cleanup: Unable to delete the author with ID: ${currentAuthorId}.`)
+            console.warn(`Test Cleanup: Unable to delete the author with ID: ${currentAuthorId}. Error: ${error}.`)
         }
     })
 

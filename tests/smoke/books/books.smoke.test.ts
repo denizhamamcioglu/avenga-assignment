@@ -5,7 +5,7 @@ import { BooksApi } from "../../../api/services/BooksApi";
 import { ResponseValidator } from "../../../common/api/ResponseValidator";
 
 let allBooksResponse: APIResponse | undefined
-let booksToBeDeleted: number[] = []
+const booksToBeDeleted: number[] = []
 
 test.describe("Test happy path flows of Books API", () => {
     test.beforeAll(async () => {
@@ -21,7 +21,7 @@ test.describe("Test happy path flows of Books API", () => {
                 await BooksApi.deleteBookWithId(bookId)
             }
         } catch (error: any) {
-            console.warn(`Test Cleanup: Unable to delete the book with ID: ${currentBookId}.`)
+            console.warn(`Test Cleanup: Unable to delete the book with ID: ${currentBookId}. Error: ${error}`)
         }
     })
 
