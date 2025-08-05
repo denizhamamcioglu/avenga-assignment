@@ -44,9 +44,9 @@ jobs:
         retention-days: 10
 
     - name: Deploy Allure Test Report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+      if: always()
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: playwright-report
