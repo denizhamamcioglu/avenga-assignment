@@ -4,7 +4,7 @@
 
 Hi! 👋
 
-Here are a couple of notes which you might be curious about once you start checking out the project:
+Here are a few notes that might be helpful before you start reviewing the project:
 
 1. If you check the GitHub Actions execution history, you’ll notice a few tests are failing. This is intentional and due to actual bugs in the Fake Books API implementation. The reasons for these failures are documented as comments within the corresponding tests.
 2. Some tests (such as author and books smoke tests) include comments explaining my approach. These are not leftover code blocks, but intentional notes.
