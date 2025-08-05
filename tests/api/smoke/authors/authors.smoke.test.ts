@@ -57,7 +57,6 @@ test.describe("Test happy path flows of Authors API", () => {
     test("TC-AUTHORS-04 - Validate PUT /Authors/<id> endpoint", async () => {
         // In order to provide isolated tests which are independent from each other and the available data, it is better to create a new author from scratch in beforeAll() block of this test file.
         // However, since the fake Authors API does not permanently save the newly created author even if we call the POST /authors endpoint, this test first gets all available authors and uses the first one.
-
         const authorIdToUpdate = await (await allAuthorsResponse?.json())[0]['id']
         const updateAuthorResponse = await AuthorsApi.updateAuthor(authorIdToUpdate, AuthorsRequests.NEW_AUTHOR)
         await ResponseValidator.performBasicResponseChecks(updateAuthorResponse!, authorsResponseSchema)

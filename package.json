@@ -1,7 +1,7 @@
 {
   "name": "avenga-assignment",
   "version": "1.0.0",
-  "description": "assignment for the principal QA automation engineer role",
+  "description": "Assignment for the principal QA automation engineer role",
   "scripts": {
     "prepare": "husky",
     "lint": "npx eslint --fix",
