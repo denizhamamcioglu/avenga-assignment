@@ -50,3 +50,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          npx gh-pages \
+            -d playwright-report \
+            -b gh-pages \
+            --dest "runs/${{ github.run_number }}" \
+            -m "Deploy Playwright report for run ${{ github.run_number }} [skip ci]"
