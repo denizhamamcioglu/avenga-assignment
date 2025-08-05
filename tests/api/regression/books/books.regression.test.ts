@@ -1,7 +1,7 @@
 import test, { expect } from "@playwright/test";
-import { BooksRequests } from "../../../api/data/requests/books/BooksRequests";
-import { BooksApi } from "../../../api/services/BooksApi";
-import { DataGenerator } from "../../../common/utils/DataGenerator";
+import { BooksRequests } from "../../../../api/data/requests/books/BooksRequests";
+import { BooksApi } from "../../../../api/services/BooksApi";
+import { DataGenerator } from "../../../../common/utils/DataGenerator";
 
 test.describe("Test edge cases of the Books API", () => {
     test("TC-BOOKS-06 - Validate GET /books/<id> - Non existent book ID", async () => {

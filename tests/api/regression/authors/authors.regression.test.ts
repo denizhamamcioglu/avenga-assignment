@@ -1,7 +1,7 @@
 import test, { expect } from "@playwright/test";
-import { DataGenerator } from "../../../common/utils/DataGenerator";
-import { AuthorsApi } from "../../../api/services/AuthorsApi";
-import { AuthorsRequests } from "../../../api/data/requests/authors/AuthorsRequests";
+import { DataGenerator } from "../../../../common/utils/DataGenerator";
+import { AuthorsApi } from "../../../../api/services/AuthorsApi";
+import { AuthorsRequests } from "../../../../api/data/requests/authors/AuthorsRequests";
 
 
 const largeNumber = 10000000000

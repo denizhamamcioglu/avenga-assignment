@@ -1,8 +1,8 @@
 import test, { APIResponse, expect } from "@playwright/test";
-import { BooksRequests } from "../../../api/data/requests/books/BooksRequests";
-import { allBooksResponseSchema, booksResponseSchema } from "../../../api/data/schemas/books";
-import { BooksApi } from "../../../api/services/BooksApi";
-import { ResponseValidator } from "../../../common/api/ResponseValidator";
+import { BooksRequests } from "../../../../api/data/requests/books/BooksRequests";
+import { allBooksResponseSchema, booksResponseSchema } from "../../../../api/data/schemas/books";
+import { BooksApi } from "../../../../api/services/BooksApi";
+import { ResponseValidator } from "../../../../common/api/ResponseValidator";
 
 let allBooksResponse: APIResponse | undefined
 const booksToBeDeleted: number[] = []

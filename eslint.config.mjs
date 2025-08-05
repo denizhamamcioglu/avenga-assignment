@@ -40,7 +40,7 @@ export default defineConfig([
 
   {
     ...playwright.configs['flat/recommended'],
-    files: ['test/**'],
+    files: ['tests/**'],
     rules: {
       ...playwright.configs['flat/recommended'].rules,
       '@typescript-eslint/no-explicit-any': 'off',

@@ -4,7 +4,8 @@
   "description": "assignment for the principal QA automation engineer role",
   "scripts": {
     "prepare": "husky",
-    "lint": "npx eslint --fix"
+    "lint": "npx eslint --fix",
+    "api-tests": "npx playwright test api"
   },
   "keywords": [],
   "repository": {

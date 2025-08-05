@@ -1,8 +1,8 @@
 import test, { APIResponse, expect } from "@playwright/test";
-import { AuthorsRequests } from "../../../api/data/requests/authors/AuthorsRequests";
-import { allAuthorsResponseSchema, authorsResponseSchema } from "../../../api/data/schemas/author";
-import { AuthorsApi } from "../../../api/services/AuthorsApi";
-import { ResponseValidator } from "../../../common/api/ResponseValidator";
+import { AuthorsRequests } from "../../../../api/data/requests/authors/AuthorsRequests";
+import { allAuthorsResponseSchema, authorsResponseSchema } from "../../../../api/data/schemas/author";
+import { AuthorsApi } from "../../../../api/services/AuthorsApi";
+import { ResponseValidator } from "../../../../common/api/ResponseValidator";
 
 let allAuthorsResponse: APIResponse | undefined
 const authorsToBeDeleted: number[] = []
