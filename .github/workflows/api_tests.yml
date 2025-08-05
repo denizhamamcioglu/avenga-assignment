@@ -28,8 +28,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shardIndex: [1, 2, 3, 4]
-        shardTotal: [4]
+        shardIndex: [1, 2]
+        shardTotal: [2]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -92,4 +92,4 @@ jobs:
         publish_dir: ./playwright-report
 
     - name: Write URL in summary
-      run: echo "Test results are available at - https://${{ github.repository_owner }}.github.io/avenga-assignment/${{ github.run_number }}/" >> $GITHUB_STEP_SUMMARY
+      run: echo "Test results are available at - https://${{ github.repository_owner }}.github.io/avenga-assignment/" >> $GITHUB_STEP_SUMMARY
