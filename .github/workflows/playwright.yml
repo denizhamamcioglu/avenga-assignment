@@ -44,7 +44,7 @@ jobs:
         retention-days: 10
 
   deploy-report:
-    needs: test
+    needs: api-tests
     runs-on: ubuntu-latest
     environment:
       name: github-pages
