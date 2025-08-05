@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "husky",
     "lint": "npx eslint --fix",
-    "api-tests": "npx playwright test api",
+    "api-tests": "npx playwright test api --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}",
     "deploy-report": "gp-pages -d playwright-report"
   },
   "keywords": [],
