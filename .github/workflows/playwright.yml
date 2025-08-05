@@ -28,8 +28,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+    - name: Install Playwright
+      run: npx playwright install
 
     - name: Run API tests
       env:
@@ -42,3 +42,14 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 10
+
+  deploy-report:
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
