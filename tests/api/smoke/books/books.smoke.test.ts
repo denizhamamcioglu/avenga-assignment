@@ -13,15 +13,12 @@ test.describe("Test happy path flows of Books API", () => {
     })
 
     test.afterAll(async () => {
-        let currentBookId
-
-        try {
-            for (const bookId of booksToBeDeleted) {
-                currentBookId = bookId
+        for (const bookId of booksToBeDeleted) {
+            try {
                 await BooksApi.deleteBookWithId(bookId)
+            } catch (error: any) {
+                console.warn(`Test Cleanup: Unable to delete the book with ID: ${bookId}. Error: ${error}`)
             }
-        } catch (error: any) {
-            console.warn(`Test Cleanup: Unable to delete the book with ID: ${currentBookId}. Error: ${error}`)
         }
     })
 

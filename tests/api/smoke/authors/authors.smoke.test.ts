@@ -13,15 +13,12 @@ test.describe("Test happy path flows of Authors API", () => {
     })
 
     test.afterAll(async () => {
-        let currentAuthorId
-
-        try {
-            for (const authorId of authorsToBeDeleted) {
-                currentAuthorId = authorId
+        for (const authorId of authorsToBeDeleted) {
+            try {
                 await AuthorsApi.deleteAuthorWithId(authorId)
+            } catch (error: any) {
+                console.warn(`Test Cleanup: Unable to delete the author with ID: ${authorId}. Error: ${error}.`)
             }
-        } catch (error: any) {
-            console.warn(`Test Cleanup: Unable to delete the author with ID: ${currentAuthorId}. Error: ${error}.`)
         }
     })
 
